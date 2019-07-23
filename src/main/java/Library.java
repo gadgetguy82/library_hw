@@ -26,4 +26,12 @@ public class Library {
       addBook(book);
     }
   }
+
+  public Book removeBook(Book book) {
+    if (this.collection.remove(book)) {
+      return book;
+    } else {
+      return null;
+    }
+  }
 }

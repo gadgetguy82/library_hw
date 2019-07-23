@@ -45,4 +45,12 @@ public class LibraryTest {
     library.checkStockSpace(book);
     assertEquals(10, library.bookCount());
   }
+
+  @Test
+  public void canRemoveBook() {
+    library.addBook(book);
+    assertEquals(1, library.bookCount());
+    library.removeBook(book);
+    assertEquals(0, library.bookCount());
+  }
 }
